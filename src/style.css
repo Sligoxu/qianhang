@@ -1,0 +1,158 @@
+/*css reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #eee;
+}
+
+@media (min-width:500px) {
+    .globalHeader {
+        max-width: 600px;
+        margin-top: 160px;
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:500px) {
+    .globalHeader {
+        margin: 60px 30px 40px 30px;
+    }
+}
+
+.searchForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchForm>input {
+    width: 100%;
+    border: 1px solid royalblue;
+    border-radius: 4px 0 0 4px;
+    padding: 0 8px;
+}
+
+.searchForm>button {
+    height: 32px;
+    border: 1px solid royalblue;
+    background-color: royalblue;
+    color: white;
+    white-space: nowrap;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+    padding: 0 25px;
+}
+
+@media (min-width:500px) {
+    .globalMain {
+        max-width: 830px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:500px) {
+    .globalMain {
+        margin: 0 30px;
+    }
+}
+
+.siteList>li {
+    margin-bottom: 20px;
+}
+
+@media (min-width:500px) {
+    .siteList>li {
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+    .globalMain .siteList {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -20px;
+    }
+}
+
+@media (max-width:500px) {
+    .globalMain .siteList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.globalMain .site {
+    width: 150px;
+    height: 100px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.globalMain .site>.logo {
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+@media (min-width:500px) {
+    .globalMain .site>.close {
+        position: absolute;
+        transform: scale(0.25, 0.25);
+        top: -20px;
+        right: -20px;
+        display: none;
+    }
+}
+
+@media (max-width:500px) {
+    .globalMain .site>.close {
+        position: absolute;
+        transform: scale(0.25, 0.25);
+        top: -20px;
+        right: -20px;
+    }
+}
+
+.globalMain .site:hover>.close {
+    display: block;
+    cursor: default;
+}
+
+.globalMain .site>.link {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.globalMain .addText {
+    font-size: 14px;
+}
+
+.site .icon {
+    width: 64px;
+    height: 64px;
+}
